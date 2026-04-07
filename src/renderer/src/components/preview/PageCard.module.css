@@ -1,0 +1,98 @@
+/*
+ * Screen: 756 x 1086px = 200mm x 287mm at 96dpi
+ * Print:  200mm x 287mm (inside 5mm @page margins)
+ * IDENTICAL proportions — what you see is what you print.
+ */
+.page {
+  width: 756px;
+  height: 1086px;
+  background: #fff;
+  padding: 10px;
+  margin: 0 auto 20px;
+  box-shadow: var(--shadow-page);
+  border-radius: 3px;
+  position: relative;
+  box-sizing: border-box;
+}
+
+.pageBreak {
+  page-break-after: always;
+}
+
+.pageBadge {
+  position: absolute;
+  top: 2px;
+  left: 50%;
+  transform: translateX(-50%);
+  font-size: 9px;
+  color: var(--cl-muted);
+  font-weight: 600;
+  background: #fff;
+  padding: 1px 8px;
+  border-radius: 3px;
+  border: 1px solid var(--cl-border);
+  z-index: 20;
+}
+
+/* Bullseye targets */
+.anchor {
+  position: absolute;
+  width: 16px;
+  height: 16px;
+  z-index: 30;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.anchorTL { top: 3px; left: 3px; }
+.anchorTR { top: 3px; right: 3px; }
+.anchorBL { bottom: 3px; left: 3px; }
+.anchorBR { bottom: 3px; right: 3px; }
+
+/* QR — top-right, before TR bullseye */
+.qrWrap {
+  position: absolute;
+  top: 4px;
+  right: 22px;
+  display: flex;
+  align-items: center;
+  gap: 3px;
+  z-index: 5;
+}
+.qrImg {
+  width: 60px;
+  height: 60px;
+  image-rendering: pixelated;
+  -webkit-print-color-adjust: exact;
+  print-color-adjust: exact;
+}
+.qrLabel {
+  font-size: 5.5px;
+  color: #bbb;
+  font-family: var(--font-mono);
+  letter-spacing: 0.2px;
+  white-space: nowrap;
+}
+
+.contentArea {
+  position: relative;
+  width: 100%;
+}
+
+@media print {
+  .page {
+    width: 200mm !important;
+    height: 287mm !important;
+    margin: 0 !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+    border-radius: 0 !important;
+    overflow: hidden !important;
+    background: #fff !important;
+    page-break-inside: avoid !important;
+  }
+  .pageBadge { display: none !important; }
+  .anchor {
+    -webkit-print-color-adjust: exact !important;
+    print-color-adjust: exact !important;
+  }
+}

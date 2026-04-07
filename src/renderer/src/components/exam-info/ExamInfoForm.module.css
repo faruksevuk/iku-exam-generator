@@ -1,0 +1,45 @@
+.heading {
+  margin: 0 0 var(--sp-5);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cl-dark);
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: var(--sp-5);
+}
+
+.instructionsRow {
+  margin-top: var(--sp-5);
+}
+
+.bulletPreview {
+  margin-top: 8px;
+  padding: 10px 12px;
+  background: #f8f9fa;
+  border: 1px solid var(--cl-border);
+  border-radius: var(--radius-sm);
+  font-size: 13px;
+  color: var(--cl-sub);
+}
+.bulletPreviewLabel {
+  font-size: 11px;
+  font-weight: 600;
+  color: var(--cl-muted);
+  display: block;
+  margin-bottom: 4px;
+}
+.bulletList {
+  margin: 0;
+  padding-left: 18px;
+  line-height: 1.6;
+  list-style-type: disc;
+}
+
+.footer {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: var(--sp-2);
+}

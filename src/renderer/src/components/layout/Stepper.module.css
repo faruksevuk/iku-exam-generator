@@ -1,0 +1,65 @@
+.stepper {
+  display: flex;
+  gap: 4px;
+  padding: 10px 24px;
+  background: #fff;
+  border-bottom: 1px solid var(--cl-border);
+  align-items: center;
+}
+
+.homeBtn {
+  padding: 8px 14px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 600;
+  cursor: pointer;
+  color: var(--cl-mid);
+  margin-right: 8px;
+  border: 1.5px solid var(--cl-border-med);
+  background: #fff;
+  font-family: var(--font-sans);
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  transition: all var(--transition);
+  white-space: nowrap;
+}
+.homeBtn:hover {
+  background: var(--iku-red-light);
+  border-color: var(--iku-red);
+  color: var(--iku-red);
+}
+
+.step {
+  flex: 1;
+  padding: 8px 12px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  font-weight: 500;
+  cursor: pointer;
+  text-align: center;
+  transition: all var(--transition);
+  color: var(--cl-muted);
+}
+
+.stepActive {
+  composes: step;
+  font-weight: 600;
+  background: var(--iku-red);
+  color: #fff;
+}
+
+.stepDone {
+  composes: step;
+  background: var(--cl-success-bg);
+  color: var(--cl-success);
+  font-weight: 600;
+}
+
+.stepPending {
+  composes: step;
+  color: var(--cl-muted);
+}
+.stepPending:hover {
+  background: var(--cl-bg);
+}

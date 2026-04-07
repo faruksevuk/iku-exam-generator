@@ -1,0 +1,62 @@
+.sidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  min-width: 150px;
+  border-right: 1px solid var(--cl-border);
+  padding-right: var(--sp-3);
+  max-height: 520px;
+  overflow-y: auto;
+}
+.item {
+  padding: 8px 10px;
+  border-radius: var(--radius-md);
+  font-size: 13px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  border: 1.5px solid transparent;
+  transition: all var(--transition);
+}
+.itemActive {
+  composes: item;
+  font-weight: 600;
+  background: #eef2ff;
+  color: var(--cl-dark);
+  border-color: var(--cl-accent);
+}
+.itemInactive {
+  composes: item;
+  font-weight: 400;
+  color: var(--cl-sub);
+}
+.itemInactive:hover {
+  background: var(--cl-bg);
+}
+.badge {
+  font-size: 16px;
+  line-height: 1;
+  flex-shrink: 0;
+}
+.check {
+  margin-left: auto;
+  font-size: 11px;
+  color: var(--cl-success);
+}
+.addBtn {
+  width: 100%;
+  padding: 8px 0;
+  border-radius: var(--radius-md);
+  border: 1.5px dashed var(--cl-success);
+  background: transparent;
+  font-size: 13px;
+  color: var(--cl-success);
+  cursor: pointer;
+  font-weight: 600;
+  margin-top: 6px;
+  transition: all var(--transition);
+}
+.addBtn:hover {
+  background: var(--cl-success-bg);
+}

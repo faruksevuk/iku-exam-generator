@@ -1,0 +1,54 @@
+.block {
+  border: 2px solid #ddd;
+  border-radius: 4px;
+  padding: 9px;
+  margin: 0; /* no margin — gap is controlled by the masonry packer */
+  page-break-inside: avoid;
+  break-inside: avoid;
+  overflow: hidden;
+  overflow-wrap: break-word;
+  word-break: break-word;
+  box-sizing: border-box;
+}
+.blockHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 4px;
+  border-bottom: 1px solid #eee;
+  padding-bottom: 3px;
+}
+.qLabel { font-size: 12px; font-weight: 700; }
+.ptsBadge { font-size: 9px; color: #666; font-weight: 600; border: 1px solid #ddd; padding: 1px 5px; border-radius: 3px; }
+.penaltyInfo { color: #dc2626; font-weight: 500; }
+.qText { font-size: 11px; margin-bottom: 5px; white-space: pre-wrap; overflow-wrap: break-word; word-break: break-word; }
+.qImage { max-width: 42%; max-height: 95px; display: block; margin: 3px 0; border-radius: 3px; }
+.optionGrid { display: grid; grid-template-columns: 1fr 1fr; gap: 2px 8px; }
+.optionRow { display: flex; align-items: center; gap: 5px; margin-bottom: 2px; }
+.mcCircle { width: 12px; height: 12px; border-radius: 50%; border: 2px solid #333; flex-shrink: 0; }
+.msSquare { width: 12px; height: 12px; border-radius: 2px; border: 2px solid #333; flex-shrink: 0; }
+.optionText { font-size: 10px; overflow-wrap: break-word; word-break: break-word; }
+.optionBold { font-weight: 700; }
+.fillText { font-size: 10px; margin-bottom: 4px; line-height: 2; }
+.fillBlank { border-bottom: 2px solid #333; display: inline-block; min-width: 50px; height: 12px; margin: 0 2px; }
+.matchTable { width: 100%; border-collapse: collapse; font-size: 10px; }
+.matchTh { border: 1px solid #ddd; padding: 3px 6px; background: #f5f5f5; font-size: 8px; }
+.matchTd { border: 1px solid #ddd; padding: 3px 6px; }
+.matchTdCenter { composes: matchTd; text-align: center; font-weight: 600; }
+.answerBox { border: 2px solid #999; border-radius: 3px; margin-top: 7px; padding: 13px 10px 7px; position: relative; box-sizing: border-box; }
+.answerBoxItems { display: flex; flex-wrap: wrap; gap: 5px 12px; }
+.answerItem { display: flex; align-items: center; gap: 3px; }
+.answerItemLabel { font-size: 10px; font-weight: 700; color: #555; font-family: var(--font-mono); }
+.answerItemBox { height: 24px; border: 2px solid #999; border-radius: 2px; }
+.solutionArea { border: 2px solid #999; border-radius: 3px; margin-top: 7px; position: relative; box-sizing: border-box; }
+.borderLabel {
+  position: absolute;
+  background: #fff;
+  padding: 0 4px;
+  font-size: 8px;
+  font-weight: 700;
+  color: #777;
+  line-height: 16px;
+}
+.borderLabelTL { composes: borderLabel; top: -8px; left: 8px; }
+.borderLabelBR { composes: borderLabel; bottom: -8px; right: 8px; }

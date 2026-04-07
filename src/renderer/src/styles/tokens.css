@@ -1,0 +1,62 @@
+:root {
+  /* IKU Brand Colors */
+  --iku-red: #ed1b24;
+  --iku-red-dark: #c41820;
+  --iku-red-light: #fef2f2;
+  --iku-black: #1a1a1a;
+  --iku-gray: #c7c8ca;
+
+  /* App Colors — derived from IKU brand */
+  --cl-dark: #1a1a1a;
+  --cl-mid: #3a3a3a;
+  --cl-accent: #ed1b24;
+  --cl-accent-hover: #c41820;
+  --cl-accent-light: #fef2f2;
+  --cl-border: #e5e5e5;
+  --cl-border-med: #d4d4d4;
+  --cl-text: #1a1a1a;
+  --cl-sub: #525252;
+  --cl-muted: #737373;
+  --cl-bg: #fafafa;
+  --cl-card: #ffffff;
+  --cl-danger: #dc2626;
+  --cl-danger-bg: #fef2f2;
+  --cl-success: #16a34a;
+  --cl-success-bg: #f0fdf4;
+  --cl-warning: #d97706;
+
+  /* Question type accents — distinct, accessible */
+  --accent-mc: #2563eb;
+  --accent-ms: #0d9488;
+  --accent-open: #ea580c;
+  --accent-match: #7c3aed;
+  --accent-fill: #16a34a;
+
+  /* Typography */
+  --font-sans: 'DM Sans', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  --font-mono: 'JetBrains Mono', 'Consolas', monospace;
+
+  /* Spacing — 8px grid */
+  --sp-1: 4px;
+  --sp-2: 8px;
+  --sp-3: 12px;
+  --sp-4: 16px;
+  --sp-5: 20px;
+  --sp-6: 24px;
+  --sp-8: 32px;
+  --sp-10: 40px;
+  --sp-12: 48px;
+
+  /* Radii */
+  --radius-sm: 6px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  /* Shadows */
+  --shadow-card: 0 1px 3px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.04);
+  --shadow-card-hover: 0 4px 12px rgba(0, 0, 0, 0.08), 0 2px 4px rgba(0, 0, 0, 0.04);
+  --shadow-page: 0 1px 8px rgba(0, 0, 0, 0.08);
+
+  /* Transitions */
+  --transition: 0.15s ease;
+}

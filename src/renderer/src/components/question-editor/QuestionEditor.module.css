@@ -1,0 +1,9 @@
+.heading {
+  margin: 0 0 var(--sp-5);
+  font-size: 20px;
+  font-weight: 700;
+  color: var(--cl-dark);
+}
+.layout { display: flex; }
+.footer { display: flex; justify-content: space-between; }
+.footerRight { display: flex; gap: 8px; }

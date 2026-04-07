@@ -1,0 +1,66 @@
+.app {
+  font-family: var(--font-sans);
+  min-height: 100vh;
+  background: var(--cl-bg);
+  color: var(--cl-text);
+}
+
+.topBar {
+  background: #fff;
+  padding: 10px 24px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 56px;
+  border-bottom: 2px solid var(--iku-red);
+}
+
+.topBarLeft {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+.logo {
+  width: 38px;
+  height: 38px;
+  border-radius: 4px;
+  object-fit: contain;
+}
+
+.appTitle {
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cl-dark);
+}
+
+.appSub {
+  font-size: 11px;
+  color: var(--cl-muted);
+  margin-top: 1px;
+}
+
+.version {
+  font-size: 11px;
+  color: var(--cl-muted);
+}
+
+.content {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: var(--sp-6) var(--sp-5);
+}
+
+@media print {
+  .app {
+    background: #fff !important;
+    min-height: auto !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+  .content {
+    max-width: none !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+}

@@ -1,0 +1,167 @@
+.panel {
+  flex: 1;
+  padding-left: var(--sp-5);
+  max-height: 540px;
+  overflow-y: auto;
+}
+
+/* Header bar */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--sp-4);
+  padding-bottom: var(--sp-3);
+  border-bottom: 1px solid var(--cl-border);
+}
+.headerLeft {
+  margin: 0;
+  font-size: 17px;
+  font-weight: 700;
+  color: var(--cl-dark);
+}
+.headerRight {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.ptsLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cl-sub);
+}
+.ptsInput {
+  width: 60px;
+  padding: 6px 8px;
+  text-align: center;
+  height: 36px;
+  font-size: 14px;
+}
+
+/* Type selector — pill buttons */
+.typeSelector {
+  display: flex;
+  gap: 6px;
+  margin-bottom: var(--sp-5);
+  background: var(--cl-bg);
+  padding: 4px;
+  border-radius: var(--radius-md);
+}
+.typeBtn {
+  flex: 1;
+  padding: 10px 4px 8px;
+  border-radius: var(--radius-sm);
+  font-size: 11px;
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  font-family: var(--font-sans);
+  border: none;
+  background: transparent;
+  color: var(--cl-muted);
+  transition: all var(--transition);
+  line-height: 1.3;
+}
+.typeBtn:hover {
+  color: var(--cl-sub);
+}
+.typeBtnActive {
+  composes: typeBtn;
+  background: #fff;
+  color: var(--cl-accent);
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.08);
+}
+.typeIcon {
+  font-size: 18px;
+  display: block;
+  margin-bottom: 3px;
+}
+
+/* Sections */
+.section {
+  margin-bottom: var(--sp-5);
+}
+.sectionLabel {
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--cl-sub);
+  margin-bottom: 8px;
+  display: block;
+}
+
+/* Image upload zone */
+.imageZone {
+  border: 1.5px dashed var(--cl-border-med);
+  border-radius: var(--radius-md);
+  padding: var(--sp-4);
+  text-align: center;
+  cursor: pointer;
+  transition: all var(--transition);
+  background: var(--cl-bg);
+  position: relative;
+}
+.imageZone:hover {
+  border-color: var(--cl-accent);
+  background: #eef2ff;
+}
+.imageZoneText {
+  font-size: 13px;
+  color: var(--cl-muted);
+  font-weight: 500;
+}
+.imageZoneHint {
+  font-size: 11px;
+  color: var(--cl-muted);
+  margin-top: 2px;
+  opacity: 0.7;
+}
+.imageZoneInput {
+  position: absolute;
+  inset: 0;
+  opacity: 0;
+  cursor: pointer;
+}
+.imagePreview {
+  position: relative;
+  display: inline-block;
+  margin-top: 8px;
+}
+.imagePreviewImg {
+  max-width: 220px;
+  max-height: 140px;
+  border-radius: var(--radius-md);
+  border: 1px solid var(--cl-border);
+}
+.imageRemoveBtn {
+  position: absolute;
+  top: -6px;
+  right: -6px;
+  width: 22px;
+  height: 22px;
+  border-radius: 50%;
+  background: var(--cl-danger);
+  color: #fff;
+  border: none;
+  font-size: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+/* Question text area */
+.questionTextarea {
+  min-height: 90px;
+}
+
+.fieldGap {
+  margin-bottom: var(--sp-3);
+}
+
+/* Divider line between sections */
+.divider {
+  border: none;
+  border-top: 1px solid var(--cl-border);
+  margin: var(--sp-5) 0;
+}

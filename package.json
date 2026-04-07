@@ -1,0 +1,53 @@
+{
+  "name": "iku-exam-generator",
+  "version": "1.0.5",
+  "description": "OCR-Compatible Exam Paper Creator for T.C. Istanbul Kultur Universitesi",
+  "main": "./out/main/index.js",
+  "scripts": {
+    "dev": "electron-vite dev",
+    "build": "electron-vite build",
+    "preview": "electron-vite preview",
+    "package": "electron-builder --win"
+  },
+  "dependencies": {
+    "qrcode-generator": "^2.0.4",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4"
+  },
+  "devDependencies": {
+    "@types/react": "^19.2.14",
+    "@types/react-dom": "^19.2.3",
+    "@vitejs/plugin-react": "^5.2.0",
+    "electron": "^41.1.1",
+    "electron-builder": "^26.8.1",
+    "electron-vite": "^5.0.0",
+    "typescript": "^6.0.2",
+    "vite": "^6.4.1"
+  },
+  "build": {
+    "appId": "com.iku.examgenerator",
+    "productName": "IKU Exam Generator",
+    "files": [
+      "out/**/*",
+      "resources/**/*"
+    ],
+    "win": {
+      "target": [
+        "nsis",
+        "portable"
+      ],
+      "icon": "resources/icon.ico"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true
+    },
+    "fileAssociations": [
+      {
+        "ext": "ikuexam",
+        "name": "IKU Exam File",
+        "description": "IKU Exam Generator File"
+      }
+    ]
+  }
+}
